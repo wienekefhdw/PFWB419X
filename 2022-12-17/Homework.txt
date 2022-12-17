@@ -1,0 +1,5 @@
+Hausaufgabe vom 17.12.22
+Task 1: Write the HTML code for a page with a heading "My Favorite Colors" and a list of three colors: red, green, and blue.
+Task 2: Write the CSS code to change the text color of all headings on the page to purple.
+Task 3: Write the HTML code for a form with two text input fields for a username and password, and a submit button.
+Task 4: Write the CSS code to center the form on the page and give the submit button a red border.
