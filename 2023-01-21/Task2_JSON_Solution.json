@@ -1,0 +1,19 @@
+{
+    "Name":"Matthis Wieneke",
+    "Phone":"01764315671",
+    "Email":"mail@matth.is",
+    "Age":100,
+    "WearsGlasses":true,
+    "TopThreeFavoriteSongs":[
+       "Song 1",
+       "Song 2",
+       "Song 3"
+    ],
+    "Address":{
+       "Street":"Fürstenallee 3",
+       "City":"Paderborn",
+       "State":"NRW",
+       "Zip":"12345",
+       "Country":"Germany"
+    }
+ }
