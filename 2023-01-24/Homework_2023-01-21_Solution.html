@@ -10,15 +10,29 @@
     /*
       Hausaufgabe:
       Baue einen Button ein, welcher auf Klick das zweite Modul jedes Semesters in Bergfest umbenennt.
+    */
+    function bergfest(){
+      let modulenameElements = document.getElementsByClassName("modulename");
 
+      for(let i = 1; i < modulenameElements.length; i+=3){
+        let module = modulenameElements.item(i);
+        module.textContent = "Bergfest";
+      }
+    }
+
+    /*
       BONUS:
       Formuliere/Überlege dir MEHRERE Herangehensweisen, wie du die anzupassenden Zellen identifizieren könntest.
-
-      Lösung: Siehe git: 2023-01-24/Homework_2023-01-21_Solution.html
+      * Konkrete Identifikation über
+      ** IDs/Klassen am td Element
+      ** Zelleninhalt
+      * Iteration durch jede Zelle. Ändern jeder dritten Zelle mit Offset 1
+      ** Schleife mit 3er Inkrement
+      ** Schleife mit Moduloprüfung im SChleifenbody
     */
   </script>
   
-  <style style="display: block; white-space: pre;" contenteditable>  
+  <style>  
     table, th, td {
       border: 1px solid black;
     }
@@ -36,6 +50,8 @@
     }
   </style> 
 
+  <button onclick="bergfest()">Bergfest</button>
+
   <h1>Notenübersicht</h1>
 
   <p>Student: Matthis</p>
@@ -49,17 +65,17 @@
       <th>Note</th>
     </tr>
     <tr>
-      <td>WTA</td>
+      <td class="modulename">WTA</td>
       <td class="P status">P</td>
       <td class="grade">1.0</td>
     </tr>
     <tr>
-      <td>ABD</td>
+      <td class="modulename">ABD</td>
       <td id="ADBStatus" class="N status">N</td>
       <td class="grade" id="ADBNote">5.0</td>
     </tr>
     <tr>
-      <td>CDE</td>
+      <td class="modulename">CDE</td>
       <td class="P status">P</td>
       <td class="grade">1.7</td>
     </tr>
@@ -73,17 +89,17 @@
       <th>Note</th>
     </tr>
     <tr>
-      <td>Mathe</td>
+      <td class="modulename">Mathe</td>
       <td class="P status">P</td>
       <td class="grade">4.0</td>
     </tr>
     <tr>
-      <td>P1</td>
+      <td class="modulename">P1</td>
       <td class="N status">N</td>
       <td class="grade">5.0</td>
     </tr>
     <tr>
-      <td>Business English</td>
+      <td class="modulename">Business English</td>
       <td class="P status">P</td>
       <td class="grade">1.0</td>
     </tr>
