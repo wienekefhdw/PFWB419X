@@ -7,28 +7,33 @@
 </head>
 <body>
   <script>
-    /*
-      Hausaufgabe:
-      Baue einen Button ein, welcher auf Klick das zweite Modul jedes Semesters in Bergfest umbenennt.
-    */
-    function bergfest(){
-      let modulenameElements = document.getElementsByClassName("modulename");
-
-      for(let i = 1; i < modulenameElements.length; i+=3){
-        let module = modulenameElements.item(i);
+    function renameModulesModulo(){
+      let allModuleElements = document.getElementsByClassName("classmodule");
+      for(let i = 0; i < allModuleElements.length; i++){
+        if(i % 3 == 1){
+          let module = allModuleElements.item(i);
+          module.textContent = "Bergfest";
+        }
+      }
+    }
+    
+    function renameModules(){
+      let allModuleElements = document.getElementsByClassName("classmodule");
+      for(let i = 1; i < allModuleElements.length; i+=3){
+        let module = allModuleElements.item(i);
         module.textContent = "Bergfest";
       }
     }
 
     /*
+      Hausaufgabe:
+      Baue einen Button ein, welcher auf Klick 
+      das zweite Modul jedes Semesters in Bergfest umbenennt.
+
       BONUS:
       Formuliere/Überlege dir MEHRERE Herangehensweisen, wie du die anzupassenden Zellen identifizieren könntest.
-      * Konkrete Identifikation über
-      ** IDs/Klassen am td Element
-      ** Zelleninhalt
-      * Iteration durch jede Zelle. Ändern jeder dritten Zelle mit Offset 1
-      ** Schleife mit 3er Inkrement
-      ** Schleife mit Moduloprüfung im Schleifenbody
+
+      Lösung: Siehe git: 2023-01-24/Homework_2023-01-21_Solution.html
     */
   </script>
   
@@ -50,8 +55,6 @@
     }
   </style> 
 
-  <button onclick="bergfest()">Bergfest</button>
-
   <h1>Notenübersicht</h1>
 
   <p>Student: Matthis</p>
@@ -65,17 +68,17 @@
       <th>Note</th>
     </tr>
     <tr>
-      <td class="modulename">WTA</td>
+      <td class="classmodule">WTA</td>
       <td class="P status">P</td>
       <td class="grade">1.0</td>
     </tr>
     <tr>
-      <td class="modulename">ABD</td>
+      <td class="classmodule">ABD</td>
       <td id="ADBStatus" class="N status">N</td>
       <td class="grade" id="ADBNote">5.0</td>
     </tr>
     <tr>
-      <td class="modulename">CDE</td>
+      <td class="classmodule">CDE</td>
       <td class="P status">P</td>
       <td class="grade">1.7</td>
     </tr>
@@ -89,20 +92,22 @@
       <th>Note</th>
     </tr>
     <tr>
-      <td class="modulename">Mathe</td>
+      <td class="classmodule">Mathe</td>
       <td class="P status">P</td>
       <td class="grade">4.0</td>
     </tr>
     <tr>
-      <td class="modulename">P1</td>
+      <td class="classmodule">P1</td>
       <td class="N status">N</td>
       <td class="grade">5.0</td>
     </tr>
     <tr>
-      <td class="modulename">Business English</td>
+      <td class="classmodule">Business English</td>
       <td class="P status">P</td>
       <td class="grade">1.0</td>
     </tr>
   </table>
+  <br>
+  <button type="Button" onclick="renameModules()">Bergfest</button>
 </body>
 </html>
