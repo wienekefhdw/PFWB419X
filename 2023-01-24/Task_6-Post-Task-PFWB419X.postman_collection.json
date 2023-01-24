@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "dd3d870f-1956-4e7f-b605-d87651dffaa5",
+		"name": "Post-Task-PFWB419X",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Save Student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\":\"Matthis\",\r\n    \"lastName\":\"PFWB419X\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://ifws420b-rest.azurewebsites.net/Student",
+					"protocol": "https",
+					"host": [
+						"ifws420b-rest",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"Student"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

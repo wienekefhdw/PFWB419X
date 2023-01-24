@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Notendarstellung</title>
+    <meta name="description" content="Noten der FHDW">
+  </head>
+  <body>
+    <script>
+      /*
+        Aufgabe: Baue ein Frontend, 
+        welches nach Buttonklick eine GUID vom Server abruft und darstellt.
+
+        TODO BONUS: Lass den Anwender den ersten Buchstaben der GUID als Parameter übergeben.
+      */
+
+      function getGuid(){
+        // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+        fetch('https://ifws420b-rest.azurewebsites.net/guid/')
+          .then((response) => response.json())
+          .then((guid) => {
+            document.getElementById("guidResult").textContent = guid;
+          });
+      }
+    </script>
+
+    <h1>Guid Generator</h1>
+    <button onclick="getGuid()">Create Guid</button>
+    <p id="guidResult"></p>
+  </body>
+</html>
