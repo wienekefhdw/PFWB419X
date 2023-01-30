@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Save Student</title>
+    <meta name="description" content="Save Student">
+  </head>
+  <body>
+    <h1>Save Student</h1>
+    <label for="firstname">Vorname</label>
+    <input type="text" name="startcharacter" id="firstname"><br>
+    <label for="lastname">Nachname</label>
+    <input type="text" name="startcharacter" id="lastname"><br>
+    <button onclick="saveStudent()">Speichern</button>
+    <p id="result"></p>
+    <p id="resultFn"></p>
+    <p id="resultLn"></p>
+    <script>
+      function saveStudent() {
+          let firstname = document.getElementById("firstname").value;
+          let lastname = document.getElementById("lastname").value;
+          const apiUrl = 'https://ifws420b-rest.azurewebsites.net/Student';
+          // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#supplying_request_options
+          fetch(apiUrl, {
+              method: 'POST',
+              headers: {
+                  'Accept': 'application/json',
+                  'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({ "firstName": firstname, "lastName": lastname })
+          }).then(response => {
+              return response.json();
+          }).then(data => {
+              // continue here when response received
+              console.log(data);
+              document.getElementById("result").innerHTML = 'Student created: ' + JSON.stringify(data);
+              document.getElementById("resultFn").innerHTML = 'Firstname: ' + data.firstName;
+              document.getElementById("resultLn").innerHTML = 'Lastname: ' + data.lastName;
+          }).catch(err => {
+              // errorhandling
+              console.log(err);
+          });
+        }
+    </script>
+  </body>
+</html>
