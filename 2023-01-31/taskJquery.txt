@@ -1,0 +1,19 @@
+Aufgabe:
+Nimm das GetGuid-Example (Siehe Github: https://github.com/wienekefhdw/PFWB419X/blob/205190f6227cd6f4b48c55fd207bbf0ff0359b4d/2023-01-24/Task_GetGuid.html) 
+und baue es um, sodass:
+	
+- jquery verwendet wird
+	
+- der Abruf der Guid nicht nach Buttonklick, sondern automatisch nach dem Laden der Seite passiert
+	
+- die Guid-Antwort vom Server mittels jquery in den dazugehörigen Paragraph Element angezeigt wird
+
+
+Bibliothek einbinden:
+https://www.w3schools.com/jquery/jquery_get_started.asp
+
+JQuery Events:
+https://www.w3schools.com/jquery/jquery_events.asp
+
+JQuery Selectors:
+https://www.w3schools.com/jquery/jquery_selectors.asp
