@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Notendarstellung</title>
+    <meta name="description" content="Noten der FHDW">
+  </head>
+  <body>
+    <h1>Save Student</h1>
+    <label for="firstnameId">Vorname:</label>
+    <input type="text" id="firstnameId"></input><br>
+    <label for="lastnameId">Nachname:</label>
+    <input type="text" id="lastnameId"></input><br>
+    <button onclick="saveStudent()">Speichern</button>
+    <script>
+      function saveStudent(){
+        let firstnameVariable = document.getElementById('firstnameId').value;
+        let lastnameVariable = document.getElementById('lastnameId').value;
+     
+        let data = {firstName: firstnameVariable, lastName: lastnameVariable};
+        
+        fetch("https://ifws420b-rest.azurewebsites.net/Student", {
+          method: "POST",
+          headers: {'Content-Type': 'application/json'}, 
+          body: JSON.stringify(data)
+        }).then(response => {
+          console.log("Request complete! response:", response);
+        });
+      }
+      /*
+        Aufgabe: Erstelle eine Webseite, die Vor- und Nachname eines Studierenden entgegennimmt
+        und speichere diese am Server.
+
+        Endpunkt: https://ifws420b-rest.azurewebsites.net/Student
+      */
+    </script>
+  </body>
+</html>
