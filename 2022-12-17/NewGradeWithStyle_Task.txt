@@ -1,0 +1,2 @@
+Nehme die Lösung von der vorherigen Aufgabe (SaveNewGrade_Sol.html) und verschönere die Webseite mit CSS.
+Baue Abstand zum Rand ein und formattiere die Formularelemente.
