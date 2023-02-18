@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            // Task: Change the text in the input field to uppercase letters 
+            // hint: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
+        
+            // Bonus: Zweiter Button, welcher allen Text auf kleine Buchstaben ändert
+
+            function startScream(){
+                var inputInCaps = document.getElementById("idOfInputField").value.toUpperCase();
+                document.getElementById("idOfInputField").value = inputInCaps;
+            }
+
+            function toLower(){
+                var inputInLowerCase = document.getElementById("idOfInputField").value.toLowerCase();
+                document.getElementById("idOfInputField").value = inputInLowerCase;
+            }
+        </script>
+        <input id="idOfInputField" type="text" value="Text inside input field" />
+        <button onclick="startScream()">Scream</button>
+        <button onclick="toLower()">To Lower</button>
+    </body>
+</html>
