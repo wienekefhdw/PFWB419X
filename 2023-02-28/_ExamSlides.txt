@@ -8,5 +8,5 @@
 * HTML/CSS/JS 98-106
 ** Übungen!!
 * JSON (siehe extra Folien (Vorlesungsmitschrift 21.01.23) sowie Übungen)
-* Cloud Basics 116
+* Cloud Basics 116-117
 * Web-Anwendungen 132-134
