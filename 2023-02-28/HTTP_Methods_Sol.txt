@@ -1,0 +1,13 @@
+Ordnen Sie http Methoden folgenden Aktionen zu:
+GET: Liste von Studierenden abrufen
+DELETE: Studierenden löschen
+PUT:Studierenden Vorname ändern
+POST: Neuen Studierenden anlegen
+GET: Einzelnen Studierenden abrufen
+
+Welche der obigen Aktionen ist idempotent und warum?
+GET, DELETE, PUT
+Mehrfache Ausführung haben das gleiche Ergebnis, wie einfache Ausführung.
+GET --> Nur Abruf. Ruft immer die Selbe Ressource abrufen
+PUT --> Ändert Ressource auf übergebene Werte. Ab dem zweiten mal findet keine Veränderung mehr statt
+DEL --> Löscht Ressource beim ersten mal. Bei Aufruf 2-n ist sie immernoch gelöscht
