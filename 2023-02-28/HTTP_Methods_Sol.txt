@@ -1,7 +1,7 @@
 Ordnen Sie http Methoden folgenden Aktionen zu:
 GET: Liste von Studierenden abrufen
 DELETE: Studierenden löschen
-PUT:Studierenden Vorname ändern
+PUT: Existierenden Studierenden mit (teilweise/evtl.) geänderten Werten abspeichern
 POST: Neuen Studierenden anlegen
 GET: Einzelnen Studierenden abrufen
 
